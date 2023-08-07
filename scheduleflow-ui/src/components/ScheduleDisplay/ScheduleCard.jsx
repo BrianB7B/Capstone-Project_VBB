@@ -41,7 +41,7 @@ export default function ScheduleCard({scheduleFlow, index}) {
   const currRating = scheduleFlow.scheduleRating
   const {earliestTime, latestTime} = getEarliestAndLatestTime(scheduleFlow.schedule)
   const {currScheduleId, setCurrScheduleId} = useContext(CurrentScheduleContext)
-  const focusClass = index - 1 === currScheduleId ? "bg-indigo-200" : ""
+  const focusClass = index - 1 === currScheduleId ? " bg-indigo-200" : ""
   return (
     <div className={"card group rounded-md bg-indigo-100 h-[7rem] w-full my-1 p-2 shadow-md flex flex-row gap-x-2 active:bg-indigo-200 cursor-pointer" + focusClass}
     onClick={() => setCurrScheduleId(index - 1)}>
